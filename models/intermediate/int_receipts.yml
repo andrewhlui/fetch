@@ -1,22 +1,10 @@
 version: 2
 
 models:
-- name: stg_receipts
+- name: int_receipts
   description: |
-    List of users with their attributes.
+    List of receipts with their attributes.
   tests:
-    - dbt_utils.expression_is_true:
-        expression: "created_timestamp <= scanned_timestamp"
-    - dbt_utils.expression_is_true:
-        expression: "created_timestamp <= modified_timestamp"
-    - dbt_utils.expression_is_true:
-        expression: "purchased_timestamp <= created_timestamp"
-    - dbt_utils.expression_is_true:
-        expression: "created_timestamp <= finished_timestamp"
-    - dbt_utils.expression_is_true:
-        expression: "finished_timestamp <= points_awarded_timestamp"
-    - dbt_utils.expression_is_true:
-        expression: "array_size(rewards_receipt_item_array) = purchased_item_count"
   columns:
     - name: receipt_id
       description: "{{ doc('receipt_id') }}"
@@ -25,44 +13,26 @@ models:
         - not_null
     - name: created_timestamp
       description: "{{ doc('created_timestamp') }}"
-      tests:
-        - not_null
     - name: scanned_timestamp
       description: "{{ doc('scanned_timestamp') }}"
-      tests:
-        - not_null
     - name: modified_timestamp
       description: "{{ doc('modified_timestamp') }}"
-      tests:
-        - not_null
     - name: rewards_receipt_status
       description: "{{ doc('rewards_receipt_status') }}"
     - name: user_id
       description: "{{ doc('user_id') }}"
-      tests:
-        - relationships:
-            to: ref('stg_users')
-            field: user_id
     - name: total_spent_amt_usd
       description: "{{ doc('total_spent_amt_usd') }}"
-      tests: 
-        - not_null
     - name: rewards_receipt_item_array
       description: "{{ doc('rewards_receipt_item_array') }}"
-      tests:
-        - not_null
     - name: purchased_timestamp
       description: "{{ doc('purchased_timestamp') }}"
-      tests:
-        - not_null
     - name: purchased_item_count
       description: "{{ doc('purchased_item_count') }}"
     - name: points_earned
       description: "{{ doc('points_earned') }}"
     - name: finished_timestamp
       description: "{{ doc('finished_timestamp') }}"
-      tests:
-        - not_null
     - name: bonus_points_earned
       description: "{{ doc('bonus_points_earned') }}"
     - name: bonus_points_earned_reason
