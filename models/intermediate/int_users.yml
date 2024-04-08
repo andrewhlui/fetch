@@ -1,19 +1,14 @@
 version: 2
 
 models:
-- name: stg_users
+- name: int_users
   description: |
     List of users with their attributes.
-  tests:
-    - dbt_utils.expression_is_true:
-        expression: "created_timestamp <= last_login_timestamp"
   columns:
     - name: user_id
       description: "{{ doc('user_id')}}"
       tests:
         - not_null
-        - unique:
-            severity: warn
     - name: is_active
       description: "{{ doc('is_active')}}"
     - name: created_timestamp

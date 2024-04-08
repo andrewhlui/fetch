@@ -1,0 +1,27 @@
+select
+    receipt_id,
+    partner_item_id, 
+	barcode,
+	description,
+	final_price,
+	item_price,
+	needs_fetch_review,
+	prevent_target_gap_points,
+	quantity_purchased,
+	user_flagged_barcode,
+	user_flagged_new_item,
+	user_flagged_price,
+	user_flagged_quantity,
+	points_earned,
+	points_payer_id,
+	rewards_group,
+	rewards_product_partner_id,
+	target_price,
+	brand_code,
+	competitive_product,
+	competitor_rewards_group,
+	discounted_item_price,
+    item_number,
+	original_receipt_item_text
+from
+    {{ ref('int_receipt_items') }}

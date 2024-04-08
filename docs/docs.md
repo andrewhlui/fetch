@@ -28,6 +28,9 @@ TBD
 {% docs category_code %}
 TBD
 {% enddocs %}
+{% docs item_number %}
+TBD
+{% enddocs %}
 
 {% docs user_id %}
 TBD
@@ -35,7 +38,7 @@ TBD
 {% docs is_active %}
 TBD
 {% enddocs %}
-{% docs role %}
+{% docs user_role %}
 TBD
 {% enddocs %}
 {% docs sign_up_source %}

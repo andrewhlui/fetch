@@ -1,0 +1,29 @@
+version: 2
+
+models:
+- name: fct_receipt_items
+  description: |
+    Items associated with individual receipts.
+  tests:
+    - dbt_utils.unique_combination_of_columns:
+        combination_of_columns:
+          - receipt_id
+          - partner_item_id
+  columns:
+    - name: receipt_id
+      description: "{{ doc('receipt_id') }}"
+      tests:
+        - not_null
+        - relationships:
+            to: ref('dim_receipts')
+            field: receipt_id
+    - name: partner_item_id
+      description: "{{ doc('item_number') }}"
+    - name: brand_code
+      description: "{{ doc('brand_code') }}"
+      tests:
+        - relationships:
+            to: ref('dim_brands')
+            field: brand_code
+            severity: warn
+          

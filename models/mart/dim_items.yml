@@ -1,0 +1,15 @@
+version: 2
+
+models:
+- name: dim_items
+  description: |
+    List of items with their attributes.
+  columns:
+    - name: barcode
+      description: "{{ doc('barcode') }}"
+      tests:
+        - unique
+    - name: description
+      description: "Product description."
+    - name: brand_code
+      description: "{{ doc('brand_code') }}"
