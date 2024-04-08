@@ -8,8 +8,8 @@
 {{ create_format() }}
 {{ create_stage(
     stage_name = 'fetch', 
-    integration_name = 'fetch', 
-    file_format = 'csv_gzip_format'
+    integration_name = 's3_integration', 
+    file_format = 'json_gzip_format'
     ) }}
 
 {% endmacro %}

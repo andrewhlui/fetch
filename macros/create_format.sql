@@ -3,10 +3,7 @@
 {% set format_sql %}
     create or replace file format json_gzip_format
         type = json
-        compression = gzip 
-        skip_header = 1
-        empty_field_as_null = true
-        field_optionally_enclosed_by = '"';
+        compression = gzip;
 {% endset %}
 
 {{ log('Beginning creation of file formats.') }}
