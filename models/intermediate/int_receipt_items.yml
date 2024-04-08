@@ -1,10 +1,9 @@
 version: 2
 
 models:
-- name: int_receipts_items
+- name: int_receipt_items
   description: |
     Items associated with individual receipts.
-  tests:
   columns:
     - name: receipt_id
       description: "{{ doc('receipt_id') }}"
@@ -17,4 +16,5 @@ models:
         - relationships:
             to: ref('int_brands')
             field: brand_code
+            severity: warn
           

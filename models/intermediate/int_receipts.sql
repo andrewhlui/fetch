@@ -19,4 +19,4 @@ from
 
 --deduplicate to the best of our ability based on business logic
 qualify
-    row_number() over (partition by receipt_id order by created_timestamp desc nulls last, modified_timestamp desc nulls last, finished_timestamp desc nulls last)
+    row_number() over (partition by receipt_id order by created_timestamp desc nulls last, modified_timestamp desc nulls last, finished_timestamp desc nulls last) = 1

@@ -5,7 +5,7 @@
 with cte_receipts as (
 select
     receipt_id,
-    rewards_receipt_item_array from {{ ref('stg_receipts') }}
+    rewards_receipt_item_array from {{ ref('int_receipts') }}
     )
 select
     cte_receipts.receipt_id,
@@ -37,4 +37,4 @@ select
 
 from
     cte_receipts, 
-    lateral flatten(input => rewards_receipt_item_array) as flattened;
+    lateral flatten(input => rewards_receipt_item_array) as flattened

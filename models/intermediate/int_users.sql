@@ -17,7 +17,7 @@ with cte_users as (
     from 
         {{ ref('stg_users') }}
     qualify
-        row_number() over (partition by user_id order by is_created, last_login_timestamp desc nulls last) = 1
+        row_number() over (partition by user_id order by is_active, last_login_timestamp desc nulls last) = 1
 
 ), 
 
@@ -62,4 +62,4 @@ select
     priority
 from 
     cte_receipts
-where user_id not in (select user_id from cte_users)
+where user_id not in (select user_id from cte_users) = 1

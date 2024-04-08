@@ -4,7 +4,6 @@ models:
 - name: int_receipts
   description: |
     List of receipts with their attributes.
-  tests:
   columns:
     - name: receipt_id
       description: "{{ doc('receipt_id') }}"

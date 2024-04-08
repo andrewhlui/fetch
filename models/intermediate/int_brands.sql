@@ -11,4 +11,4 @@ select
 from
     {{ ref('stg_brands') }}
 qualify
-    row_number() over (partition by brand_id order by brand_name desc nulls last, brand_code desc nulls last, category_name desc nulls last)
+    row_number() over (partition by brand_id order by brand_name desc nulls last, brand_code desc nulls last, category_name desc nulls last) = 1
