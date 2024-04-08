@@ -15,8 +15,8 @@ models:
       description: "{{ doc('is_active')}}"
     - name: created_timestamp
       description: "{{ doc('created_timestamp')}}"
-    - name: role
-      description: "{{ doc('role')}}"
+    - name: user_role
+      description: "{{ doc('user_role')}}"
     - name: sign_up_source
       description: "{{ doc('sign_up_source')}}"
     - name: state

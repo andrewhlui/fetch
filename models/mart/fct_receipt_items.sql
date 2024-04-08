@@ -1,6 +1,6 @@
 select
     receipt_id,
-    item_number, 
+    partner_item_id, 
 	barcode,
 	description,
 	final_price,
@@ -22,7 +22,7 @@ select
 	competitive_product,
 	competitor_rewards_group,
 	discounted_item_price,
-	item_number,
+    item_number,
 	original_receipt_item_text
 from
     {{ ref('int_receipt_items') }}

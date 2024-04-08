@@ -10,12 +10,12 @@ select
 select
     cte_receipts.receipt_id,
     --there are more columns than this but mapping them all out will take too long; this is a subset
-    flattened.value:"barcode" as barcode,
-    flattened.value:"description" as description,
+    flattened.value:"barcode"::varchar as barcode,
+    flattened.value:"description"::varchar as description,
     flattened.value:"finalPrice" as final_price,
     flattened.value:"itemPrice" as item_price,
     flattened.value:"needsFetchReview" as needs_fetch_review,
-    flattened.value:"partnerItemId" as partner_item_id,
+    flattened.value:"partnerItemId"::varchar as partner_item_id,
     flattened.value:"preventTargetGapPoints" as prevent_target_gap_points,
     flattened.value:"quantityPurchased" as quantity_purchased,
     flattened.value:"userFlaggedBarcode" as user_flagged_barcode,
