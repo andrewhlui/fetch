@@ -62,4 +62,4 @@ select
     priority
 from 
     cte_receipts
-where user_id not in (select user_id from cte_users) = 1
+where user_id not in (select user_id from cte_users)
