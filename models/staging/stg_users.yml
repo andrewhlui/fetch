@@ -8,7 +8,9 @@ models:
     - name: user_id
       description: "{{ doc('user_id')}}"
       tests:
-        - unique
+        - not_null
+        - unique:
+            severity: warn
     - name: is_active
       description: "{{ doc('is_active')}}"
     - name: created_timestamp

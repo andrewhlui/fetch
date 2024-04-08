@@ -1,5 +1,9 @@
 {% macro create_format() %}
 
+{# 
+    Creates a file format. In production environments you'd have multiple formats.
+#}
+
 {% set format_sql %}
     create or replace file format json_gzip_format
         type = json

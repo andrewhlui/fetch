@@ -21,19 +21,18 @@ models:
     - name: brand_name
       description: "{{ doc('brand_name') }}"
       tests:
-        - unique:
-            severity: warn
+        - not_null
+        - unique
     - name: category_name
       description: "{{ doc('category_name') }}"
     - name: brand_code
       description: "{{ doc('brand_code') }}"
       tests:
-        - unique:
-            severity: warn
+        - not_null
+        - unique
     - name: is_top_brand
       description: "{{ doc('is_top_brand') }}"
       tests:
-        - not_null:
-            severity: warn
+        - not_null
     - name: category_code
       description: "{{ doc('category_code') }}"

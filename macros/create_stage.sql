@@ -1,5 +1,9 @@
 {% macro create_stage(stage_name, integration_name, file_format) %}
 
+{# 
+    Creates a stage. In production environments you'd have multiple stages; add to onboarding as necessary.
+#}
+
 {% set stage_sql %}
 create stage {{ target.database }}.{{ target.schema }}.{{ stage_name }}_stage
   storage_integration = {{ integration_name }}
