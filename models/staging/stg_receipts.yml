@@ -7,6 +7,9 @@ models:
   columns:
     - name: receipt_id
       description: "{{ doc('receipt_id') }}"
+      tests:
+        - unique
+        - not_null
     - name: created_timestamp
       description: "{{ doc('created_timestamp') }}"
     - name: scanned_timestamp
@@ -21,10 +24,16 @@ models:
         - relationships:
             to: ref('stg_users')
             field: user_id
+            severity: warn
     - name: total_spent_amt_usd
       description: "{{ doc('total_spent_amt_usd') }}"
+      tests: 
+        - not_null:
+            severity: warn
     - name: rewards_receipt_item_array
       description: "{{ doc('rewards_receipt_item_array') }}"
+      tests:
+        - not_null
     - name: purchased_timestamp
       description: "{{ doc('purchased_timestamp') }}"
     - name: purchased_item_count
