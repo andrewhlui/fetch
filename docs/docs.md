@@ -1,5 +1,8 @@
+# Documentation
+In a production setting I would fill all of these in. I'm not going to do that for this exercise, there's already plenty to do. 
+
 {% docs brand_id %}
-TBD
+Unique alphanumeric identifier for a brand. 
 {% enddocs %}
 {% docs barcode %}
 TBD

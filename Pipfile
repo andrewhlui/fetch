@@ -1,4 +1,4 @@
-[[source]]
+[packages]
 dbt-snowflake = "~=1.7.0"
 
 [requires]

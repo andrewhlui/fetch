@@ -5,9 +5,12 @@ models:
   description: |
     List of users with their attributes.
   columns:
-  
     - name: user_id
       description: "{{ doc('user_id')}}"
+      tests:
+        - not_null
+        - unique:
+            severity: warn
     - name: is_active
       description: "{{ doc('is_active')}}"
     - name: created_timestamp
