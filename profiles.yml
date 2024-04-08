@@ -1,0 +1,14 @@
+fetch:
+  target: dev
+  
+  outputs:
+    dev:
+      account: "{{ env_var('snowflake_account') }}"
+      database: fetch
+      role: fetch_dev_role
+      schema: dev
+      threads: 4
+      type: snowflake
+      user: "{{ env_var('snowflake_user') }}"
+      password: "{{ env_var('snowflake_password') }}"
+      warehouse: fetch_dev_xs_wh

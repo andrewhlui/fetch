@@ -1,28 +1,274 @@
-[0m20:16:43.312987 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B2B6C5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B53C1510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B53C0C70>]}
+[0m20:34:11.108244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197A961F1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197ABE6FDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197ABE6E1A0>]}
 
 
-============================== 20:16:43.316977 | fd4e6c55-74f1-49ca-8543-fea9157c51d3 ==============================
-[0m20:16:43.316977 [info ] [MainThread]: Running with dbt=1.7.10
-[0m20:16:43.317974 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\andre\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
-[0m20:16:49.642713 [debug] [MainThread]: Starter project path: C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
-[0m20:16:49.684976 [info ] [MainThread]: 
-Your new dbt project "fetch" was created!
+============================== 20:34:11.111209 | 26578518-3768-4d5d-8696-19e049aa8498 ==============================
+[0m20:34:11.111209 [info ] [MainThread]: Running with dbt=1.7.10
+[0m20:34:11.112213 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\andre\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\andre\\github\\fetch\\fetch\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run-operation onboarding', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:34:11.442064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197AC72FB20>]}
+[0m20:34:11.525811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197AC8287F0>]}
+[0m20:34:11.527640 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:34:11.534163 [debug] [MainThread]: checksum: b88efa780424265bbbd676e971356ada6a7ea9debd0a80a519a6d2707465340d, vars: {}, profile: , target: , version: 1.7.10
+[0m20:34:11.535157 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:34:11.536128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197AC8EBFA0>]}
+[0m20:34:12.640697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197ACDB09A0>]}
+[0m20:34:12.663096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197AC8EA020>]}
+[0m20:34:12.663096 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 433 macros, 0 groups, 0 semantic models
+[0m20:34:12.664355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '26578518-3768-4d5d-8696-19e049aa8498', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197ACBEA410>]}
+[0m20:34:12.665355 [debug] [MainThread]: Acquiring new snowflake connection 'macro_onboarding'
+[0m20:34:12.669367 [debug] [MainThread]: Beginning creation of file formats.
+[0m20:34:12.676355 [debug] [MainThread]: Using snowflake connection "macro_onboarding"
+[0m20:34:12.677327 [debug] [MainThread]: On macro_onboarding: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "fetch", "target_name": "dev", "connection_name": "macro_onboarding"} */
+create or replace file format json_gzip_format
+        type = json
+        compression = gzip 
+        skip_header = 1
+        empty_field_as_null = true
+        field_optionally_enclosed_by = '"';
+[0m20:34:12.678320 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:34:14.083341 [debug] [MainThread]: Snowflake adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.7.10", "profile_name": "fetch", "target_name": "dev", "connection_name": "macro_onboarding"} */
+create or replace file format json_gzip_format
+        type = json
+        compression = gzip 
+        skip_header = 1
+        empty_field_as_null = true
+        field_optionally_enclosed_by = '"';
+[0m20:34:14.084339 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m20:34:14.084339 [debug] [MainThread]: Snowflake adapter: Error running SQL: macro onboarding
+[0m20:34:14.085336 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m20:34:14.085336 [debug] [MainThread]: On macro_onboarding: No close available on handle
+[0m20:34:14.086334 [error] [MainThread]: Encountered an error while running operation: Database Error
+  250001 (08001): Failed to connect to DB. Verify the account name is correct: 1.snowflakecomputing.com:443. HTTP 403: Forbidden
+[0m20:34:14.088242 [debug] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\auth\_auth.py", line 250, in authenticate
+    ret = self._rest._post_request(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 734, in _post_request
+    ret = self.fetch(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 843, in fetch
+    ret = self._request_exec_wrapper(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 979, in _request_exec_wrapper
+    raise e
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 884, in _request_exec_wrapper
+    return_object = self._request_exec(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 1193, in _request_exec
+    raise err
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\network.py", line 1104, in _request_exec
+    raise ForbiddenError
+snowflake.connector.errors.ForbiddenError: HTTP 403: Forbidden
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+During handling of the above exception, another exception occurred:
 
-  https://docs.getdbt.com/docs/configure-your-profile
+Traceback (most recent call last):
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\base\connections.py", line 241, in retry_connection
+    connection.handle = connect()
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 348, in connect
+    handle = snowflake.connector.connect(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\__init__.py", line 54, in Connect
+    return SnowflakeConnection(**kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\connection.py", line 429, in __init__
+    self.connect(**kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\connection.py", line 719, in connect
+    self.__open_connection()
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\connection.py", line 1045, in __open_connection
+    self.authenticate_with_retry(self.auth_class)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\connection.py", line 1317, in authenticate_with_retry
+    self._authenticate(auth_instance)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\connection.py", line 1345, in _authenticate
+    auth.authenticate(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\snowflake\connector\auth\_auth.py", line 258, in authenticate
+    raise err.__class__(
+snowflake.connector.errors.ForbiddenError: 250001 (08001): Failed to connect to DB. Verify the account name is correct: 1.snowflakecomputing.com:443. HTTP 403: Forbidden
 
-One more thing:
+During handling of the above exception, another exception occurred:
 
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+Traceback (most recent call last):
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\run_operation.py", line 58, in run
+    self._run_unsafe(package_name, macro_name)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\run_operation.py", line 43, in _run_unsafe
+    res = adapter.execute_macro(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\base\impl.py", line 1112, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 19, in macro
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 32, in macro
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\clients\jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\base\impl.py", line 310, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 473, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 508, in add_query
+    connection, cursor = self._add_standard_queries(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 564, in _add_standard_queries
+    connection, cursor = self.add_standard_query(query, **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 484, in add_standard_query
+    return super().add_query(self._add_query_comment(sql), **kwargs)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\sql\connections.py", line 79, in add_query
+    cursor = connection.handle.cursor()
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\contracts\connection.py", line 90, in handle
+    self._handle.resolve(self)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\contracts\connection.py", line 114, in resolve
+    return self.opener(connection)
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\snowflake\connections.py", line 384, in open
+    return cls.retry_connection(
+  File "C:\Users\andre\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\adapters\base\connections.py", line 271, in retry_connection
+    raise dbt.exceptions.FailedToConnectError(str(e))
+dbt.exceptions.FailedToConnectError: Database Error
+  250001 (08001): Failed to connect to DB. Verify the account name is correct: 1.snowflakecomputing.com:443. HTTP 403: Forbidden
 
-  https://community.getdbt.com/
+[0m20:34:14.090208 [debug] [MainThread]: Command `dbt run-operation` failed at 20:34:14.090208 after 3.04 seconds
+[0m20:34:14.091234 [debug] [MainThread]: Connection 'macro_onboarding' was properly closed.
+[0m20:34:14.091234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197A961F1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197AC8004F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000197ACB7F790>]}
+[0m20:34:14.092204 [debug] [MainThread]: Flushing usage events
+[0m20:34:26.664061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83EF8F1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F8417DFDF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F8417DE1A0>]}
 
-Happy modeling!
 
-[0m20:16:49.686634 [info ] [MainThread]: Setting up your profile.
-[0m20:17:00.525092 [info ] [MainThread]: Profile fetch written to C:\Users\andre\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m20:17:00.527086 [debug] [MainThread]: Command `dbt init` succeeded at 20:17:00.527086 after 17.28 seconds
-[0m20:17:00.528064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B2B6C5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B53C1510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A6B542F6D0>]}
-[0m20:17:00.528064 [debug] [MainThread]: Flushing usage events
+============================== 20:34:26.667052 | 922dcd20-06c4-40f5-9d62-c2b18dc8e78a ==============================
+[0m20:34:26.667052 [info ] [MainThread]: Running with dbt=1.7.10
+[0m20:34:26.667540 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\andre\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\andre\\github\\fetch\\fetch\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:34:26.668539 [info ] [MainThread]: dbt version: 1.7.10
+[0m20:34:26.669267 [info ] [MainThread]: python version: 3.10.11
+[0m20:34:26.669935 [info ] [MainThread]: python path: C:\Users\andre\AppData\Local\Programs\Python\Python310\python.exe
+[0m20:34:26.669935 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m20:34:26.912394 [info ] [MainThread]: Using profiles dir at C:\Users\andre\.dbt
+[0m20:34:26.913365 [info ] [MainThread]: Using profiles.yml file at C:\Users\andre\.dbt\profiles.yml
+[0m20:34:26.914207 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\andre\github\fetch\fetch\dbt_project.yml
+[0m20:34:26.915206 [info ] [MainThread]: adapter type: snowflake
+[0m20:34:26.916204 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:34:26.992998 [info ] [MainThread]: Configuration:
+[0m20:34:26.993781 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:34:26.994594 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:34:26.994594 [info ] [MainThread]: Required dependencies:
+[0m20:34:26.995593 [debug] [MainThread]: Executing "git --help"
+[0m20:34:27.020821 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:34:27.020821 [debug] [MainThread]: STDERR: "b''"
+[0m20:34:27.021819 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:34:27.022450 [info ] [MainThread]: Connection:
+[0m20:34:27.023305 [info ] [MainThread]:   account: 1
+[0m20:34:27.024305 [info ] [MainThread]:   user: 1
+[0m20:34:27.024305 [info ] [MainThread]:   database: 1
+[0m20:34:27.025311 [info ] [MainThread]:   warehouse: 1
+[0m20:34:27.026299 [info ] [MainThread]:   role: 1
+[0m20:34:27.026299 [info ] [MainThread]:   schema: 1
+[0m20:34:27.028294 [info ] [MainThread]:   authenticator: None
+[0m20:34:27.029291 [info ] [MainThread]:   private_key_path: None
+[0m20:34:27.029291 [info ] [MainThread]:   oauth_client_id: None
+[0m20:34:27.030307 [info ] [MainThread]:   query_tag: None
+[0m20:34:27.031285 [info ] [MainThread]:   client_session_keep_alive: False
+[0m20:34:27.031285 [info ] [MainThread]:   host: None
+[0m20:34:27.032285 [info ] [MainThread]:   port: None
+[0m20:34:27.032285 [info ] [MainThread]:   proxy_host: None
+[0m20:34:27.033303 [info ] [MainThread]:   proxy_port: None
+[0m20:34:27.034282 [info ] [MainThread]:   protocol: None
+[0m20:34:27.034282 [info ] [MainThread]:   connect_retries: 1
+[0m20:34:27.035280 [info ] [MainThread]:   connect_timeout: None
+[0m20:34:27.036276 [info ] [MainThread]:   retry_on_database_errors: False
+[0m20:34:27.036276 [info ] [MainThread]:   retry_all: False
+[0m20:34:27.037274 [info ] [MainThread]:   insecure_mode: False
+[0m20:34:27.037274 [info ] [MainThread]:   reuse_connections: None
+[0m20:34:27.038294 [info ] [MainThread]: Registered adapter: snowflake=1.7.2
+[0m20:34:27.039282 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m20:34:27.040266 [debug] [MainThread]: Using snowflake connection "debug"
+[0m20:34:27.040266 [debug] [MainThread]: On debug: select 1 as id
+[0m20:34:27.041288 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:34:28.102641 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m20:34:28.103639 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m20:34:28.104636 [debug] [MainThread]: On debug: No close available on handle
+[0m20:34:28.104636 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:34:28.105633 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:34:28.106643 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  250001 (08001): Failed to connect to DB. Verify the account name is correct: 1.snowflakecomputing.com:443. HTTP 403: Forbidden
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:34:28.108626 [debug] [MainThread]: Command `dbt debug` failed at 20:34:28.108626 after 1.50 seconds
+[0m20:34:28.109652 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:34:28.109652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83EF8F1C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F8417DF5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F84217D420>]}
+[0m20:34:28.110620 [debug] [MainThread]: Flushing usage events
+[0m20:45:58.425162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A6E1845B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A709A7BE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A709A7A30>]}
+
+
+============================== 20:45:58.429124 | df2534c7-bc8a-4844-8b05-e8cb30924a8d ==============================
+[0m20:45:58.429124 [info ] [MainThread]: Running with dbt=1.7.10
+[0m20:45:58.430121 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\andre\\github\\fetch\\fetch\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:45:58.430121 [info ] [MainThread]: dbt version: 1.7.10
+[0m20:45:58.431118 [info ] [MainThread]: python version: 3.10.11
+[0m20:45:58.432117 [info ] [MainThread]: python path: C:\Users\andre\AppData\Local\Programs\Python\Python310\python.exe
+[0m20:45:58.433113 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m20:45:58.434110 [info ] [MainThread]: Using profiles dir at .
+[0m20:45:58.434110 [info ] [MainThread]: Using profiles.yml file at .\profiles.yml
+[0m20:45:58.435108 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\andre\github\fetch\fetch\dbt_project.yml
+[0m20:45:58.524891 [info ] [MainThread]: Configuration:
+[0m20:45:58.525874 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m20:45:58.526746 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:45:58.527536 [info ] [MainThread]: Required dependencies:
+[0m20:45:58.528131 [debug] [MainThread]: Executing "git --help"
+[0m20:45:58.550998 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:45:58.550998 [debug] [MainThread]: STDERR: "b''"
+[0m20:45:58.552018 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:45:58.552992 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m20:45:58.552992 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:45:58.553989 [info ] [MainThread]: dbt looked for a profiles.yml file in .\profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:45:58.556397 [debug] [MainThread]: Command `dbt debug` failed at 20:45:58.556397 after 0.15 seconds
+[0m20:45:58.556397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A6E1845B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A70A616C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011A70A63FA0>]}
+[0m20:45:58.557419 [debug] [MainThread]: Flushing usage events
