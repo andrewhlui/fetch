@@ -1,0 +1,41 @@
+version: 2
+
+models:
+- name: stg_receipts
+  description: |
+    List of users with their attributes.
+  columns:
+    - name: receipt_id
+      description: "{{ doc('receipt_id') }}"
+    - name: created_timestamp
+      description: "{{ doc('created_timestamp') }}"
+    - name: scanned_timestamp
+      description: "{{ doc('scanned_timestamp') }}"
+    - name: modified_timestamp
+      description: "{{ doc('modified_timestamp') }}"
+    - name: rewards_receipt_status
+      description: "{{ doc('rewards_receipt_status') }}"
+    - name: user_id
+      description: "{{ doc('user_id') }}"
+      tests:
+        - relationships:
+            to: ref('stg_users')
+            field: user_id
+    - name: total_spent_amt_usd
+      description: "{{ doc('total_spent_amt_usd') }}"
+    - name: rewards_receipt_item_array
+      description: "{{ doc('rewards_receipt_item_array') }}"
+    - name: purchased_timestamp
+      description: "{{ doc('purchased_timestamp') }}"
+    - name: purchased_item_count
+      description: "{{ doc('purchased_item_count') }}"
+    - name: points_earned
+      description: "{{ doc('points_earned') }}"
+    - name: finished_timestamp
+      description: "{{ doc('finished_timestamp') }}"
+    - name: bonus_points_earned
+      description: "{{ doc('bonus_points_earned') }}"
+    - name: bonus_points_earned_reason
+      description: "{{ doc('bonus_points_earned_reason') }}"
+    - name: points_awarded_timestamp
+      description: "{{ doc('points_awarded_timestamp') }}"
