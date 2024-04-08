@@ -1,5 +1,5 @@
 select
-    $1:_id:"$oid",
+    $1:_id:"$oid" as user_id,
     $1:active::boolean as is_active,
     $1:createdDate:"$date"::varchar::timestamp as created_timestamp,
     $1:role::varchar as role,

@@ -3,7 +3,7 @@ select
     $1:createDate:"$date"::varchar::timestamp as created_timestamp,
     $1:dateScanned:"$date"::varchar::timestamp as scanned_timestamp,
     $1:modifyDate:"$date"::varchar::timestamp as modified_timestamp,
-    $1:rewardsReceiptStatus::varchar,
+    $1:rewardsReceiptStatus::varchar as rewards_receipt_status,
     $1:userId::varchar as user_id,
     $1:totalSpent::varchar as total_spent_amt_usd,
     $1:rewardsReceiptItemList as rewards_receipt_item_array,
