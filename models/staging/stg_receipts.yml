@@ -5,7 +5,6 @@ models:
   description: |
     List of users with their attributes.
   columns:
-  
     - name: receipt_id
       description: "{{ doc('receipt_id') }}"
     - name: created_timestamp
