@@ -1,7 +1,7 @@
 version: 2
 
 models:
-- name: int_users
+- name: dim_users
   description: |
     List of users with their attributes.
   columns:
@@ -9,6 +9,7 @@ models:
       description: "{{ doc('user_id')}}"
       tests:
         - not_null
+        - unique
     - name: is_active
       description: "{{ doc('is_active')}}"
     - name: created_timestamp

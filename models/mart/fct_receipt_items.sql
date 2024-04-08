@@ -6,7 +6,6 @@ select
 	final_price,
 	item_price,
 	needs_fetch_review,
-	partner_item_id,
 	prevent_target_gap_points,
 	quantity_purchased,
 	user_flagged_barcode,

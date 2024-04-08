@@ -1,17 +1,27 @@
+with cte as (
+    select
+        barcode,
+        description,
+        brand_code,
+        false as is_user_flagged
+    from
+        {{ ref('int_receipt_items') }}
+    union
+    select
+        user_flagged_barcode as barcode,
+        user_flagged_description as description,
+        null as brand_code,
+        true as is_user_flagged
+    from
+        {{ ref('int_receipt_items') }}
+)
+
 select
     barcode,
-    description,
+    description, 
     brand_code,
-    false as is_user_flagged
+    is_user_flagged
 from
-    {{ ref('int_receipt_items') }}
-union
-select
-    user_flagged_barcode as barcode,
-    user_flagged_description as description,
-    null as brand_code,
-    true as is_user_flagged
-from
-    {{ ref('int_receipt_items') }}
+    cte
 qualify
     row_number() over (partition by barcode order by is_user_flagged) = 1
