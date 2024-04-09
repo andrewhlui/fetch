@@ -319,6 +319,7 @@ At a high level:
 > Data:
 > - There are some brands and users in the receipts data that aren't in the brands and users files -- who should I talk to to get that missing data?
 > - There's a fair number of duplicates (e.g. multiple users with the same ID) as well as inconsistencies (the same product being mapped to different brands/categories in different receipts) -- is there someone on the business team that I can talk to, to help me work out some business logic to clean up these issues?
+> - There are a few receipts with abnormally large spends and points earned ($4K USD in one receipt/10K points from a receipt). Do you have any guidelines on an average/maximum spend or number of points from a single transaction?
 > 
 > Separately -- I have a few questions on your use case that'll help me design the data model better.
 > - How frequently will you be looking at this data (hourly, daily, monthly)?
