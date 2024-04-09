@@ -20,6 +20,13 @@ I've included all of the data quality issues as warnings and set errors only for
 The original data came as camelCase but Snowflake works better with identifiers that are snake_cased. I've rewritten table and column names as such. 
 I've also renamed some fields to more accurately describe what kind of data they are (e.g. timestamps that were described as dates).
 
+### Layers
+This project has the following layers:
+- Staging: this contains the data in its rawest form. There are minimal changes here -- only column renames and type casting.
+- Intermediate: this contains all of the logic to convert the raw data into a relational data model. 
+- Marts: this contains the dimensions and facts, and would be the data that can be used by a business intelligence/any other technical team. Data in here would be accurate and maintained.
+- Semantic: this contains aggregations of dimensions and facts for report purposes (instead of doing complex calculations in Tableau/Looker/PowerBI layer, do them in the version-controlled semantic layer). This is what the business/non-technical users would look at. I put the answers to the business questions here. 
+
 ### Performance
 Almost everything would normally be built using incremental models; larger models would be clustered as well. Since we don't have an actual loading mechanism and there are no load dates, I'm not going to bother building this out with incremental models. 
 
