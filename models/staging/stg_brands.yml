@@ -10,12 +10,14 @@ models:
       tests:
         - not_null
         - unique
+      # this is weird, why do brands have barcodes? only products should have that
     - name: barcode
       description: "{{ doc('barcode') }}"
     - name: cpg_id
       description: "{{ doc('cpg_id') }}"
       tests:
         - not_null
+      # unclear definition of column, not going to test it
     - name: cpg_ref
       description: "{{ doc('cpg_ref') }}"
     - name: brand_name
