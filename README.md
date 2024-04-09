@@ -36,17 +36,36 @@ All data quality tests are set up as dbt tests.
 
 At a high level:
 - There are referential integrity issues between brands and receipts. 
-- There are duplicate users.
+- There are duplicate users and brands.
 - There are a lot of nulls where there shouldn't be.
 - There is data that defies business logic. 
 - There are items that do not sum up to their totals.
 
-### Q4: Message
+### Q4: Email Message
+
+(Note -- my personal preference is to go through these kinds of questions in a meeting with users, I often have follow-ups so this is easier than doing back-and-forth emails. Also, sending this many questions in one go typically leads to worse-quality answers as people will rush through them -- I usually try to limit to 3 questions per email and `@` the individual responsible for answering that question.)
 
 Hey `business-leader` -- 
 
-I got a chance to look through the data that you'd sent me. There are some issues with the data that I'll need your help with:
-1. We have the same brands represented multiple times in the data -- e.g. "BAKEN-ETS" is associated with both `brand_id`s of `585a961fe4b03e62d1ce0e76` and `5d9d08d1a60b87376833e348`. There's some inconsistencies in the other brand-related data as well -- 
+I got a chance to look through the data. There are some issues (for example -- some brands, like "BAKEN-ETS", are duplicated, and the file format for the `users.json.gz` file is a little different than the other files) that I'll need some help with.
+
+Data:
+- There are some brands and users in the receipts data that aren't in the brands and users files -- who should I talk to to get that missing data?
+- There's a fair number of duplicates (e.g. multiple users with the same ID) as well as inconsistencies (the same product being mapped to different brands/categories in different receipts) -- is there someone on the business team that I can talk to, to help me work out some business logic to clean up these issues?
+
+Separately -- I have a few questions on your use case that'll help me design the data model better.
+- How frequently will you be looking at this data (hourly, daily, monthly)?
+- What level do you normally look at this data (e.g. brand performance at a week-over-week level)?
+- How often will we get data from this source?
+- What are your expectations in terms of data freshness? (for example -- would you expect to data from 1pm at 2pm, 5pm, 9am the next day)
+- How far back into history do you need to look into? (for example -- do you need data from the last month, 52 weeks, 5 years)
+- Do you expect this data to get restated (and if so, how often)?
+- Is there someone on your team (ideally an analyst who would be working on this regularly) that I can talk to in order to get more requirements?
+
+For some background - this dataset is transaction-level so it could get quite large and have performance (and compute cost) implications; I'm looking for ways to scale back the data size by cutting down on history or grain without impacting the ways that you want to use this data.
+
+Thanks --
+Andrew
 
 What questions do you have about the data?
 How did you discover the data quality issues?
