@@ -18,7 +18,10 @@ inner join
 inner join
     {{ ref('dim_brands') }}
     --this _should_ use brand_id but we don't have that -- in a prod setting we'd generate a brand_id to be joined here
-    on cte_brands.brand_code = fct_receipt_items.brand_code
+    on dim_brands.brand_code = fct_receipt_items.brand_code
 where 
-    dim_users.created_timestamp >= dateadd('month', 6, current_timestamp())
+    --in a prod setting we'd want to avoid using current_timestamp() since it might change from run-to-run
+    dim_users.created_timestamp >= dateadd('month', -6, current_timestamp())
+    --going to assume we only want active users in this
+    and dim_users.is_active
 group by all
