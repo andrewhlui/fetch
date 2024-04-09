@@ -4,6 +4,11 @@ This is my attempt to model the data provided in the exercise.
 I've included some general thoughts below on some design choices/philosophy as well as my answers to the questions.
 There are quite a few choices here that I would make differently if this were an actual work project; I've skipped quite a few steps in proper design (e.g. creating a catch-all for natural keys that don't exist in their dimensions.)
 
+## Overall Approach
+- This is DBT on top of AWS Snowflake; seemed appropriate given the stack
+- Take advantage of DBT's test-driven design to find all of the data quality issues while I do modelling
+- Also get an opportunity to play around with my own instance of Snowflake + learn how to set up local dev on WSL
+
 ## General Thoughts
 
 ### Warnings versus Errors
@@ -35,3 +40,16 @@ At a high level:
 - There are a lot of nulls where there shouldn't be.
 - There is data that defies business logic. 
 - There are items that do not sum up to their totals.
+
+### Q4: Message
+
+Hey `business-leader` -- 
+
+I got a chance to look through the data that you'd sent me. There are some issues with the data that I'll need your help with:
+1. We have the same brands represented multiple times in the data -- e.g. "BAKEN-ETS" is associated with both `brand_id`s of `585a961fe4b03e62d1ce0e76` and `5d9d08d1a60b87376833e348`. There's some inconsistencies in the other brand-related data as well -- 
+
+What questions do you have about the data?
+How did you discover the data quality issues?
+What do you need to know to resolve the data quality issues?
+What other information would you need to help you optimize the data assets you're trying to create?
+What performance and scaling concerns do you anticipate in production and how do you plan to address them?

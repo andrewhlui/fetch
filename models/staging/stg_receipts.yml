@@ -13,6 +13,7 @@ models:
         expression: "purchased_timestamp <= created_timestamp"
     - dbt_utils.expression_is_true:
         expression: "created_timestamp <= finished_timestamp"
+      # todo: FIX THIS. this is wrong.
     - dbt_utils.expression_is_true:
         expression: "finished_timestamp <= points_awarded_timestamp"
     - dbt_utils.expression_is_true:
