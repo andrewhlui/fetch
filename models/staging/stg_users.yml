@@ -12,17 +12,23 @@ models:
       description: "{{ doc('user_id')}}"
       tests:
         - not_null
-        - unique:
-            severity: warn
+        - unique
     - name: is_active
       description: "{{ doc('is_active')}}"
     - name: created_timestamp
       description: "{{ doc('created_timestamp')}}"
     - name: user_role
       description: "{{ doc('user_role')}}"
+      tests:
+        - accepted_values:
+            values: ['CONSUMER']
     - name: sign_up_source
       description: "{{ doc('sign_up_source')}}"
     - name: state
       description: "{{ doc('state')}}"
+      tests:
+        - accepted_values:
+            # normally would do macro for this and list out all states there
+            values: ['WI', 'NH', 'AL', 'SC', 'IL', 'OH', 'KY', 'CO', 'NY']
     - name: last_login_timestamp
       description: "{{ doc('last_login_timestamp')}}"

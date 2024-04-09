@@ -1,5 +1,5 @@
 select
-	{{ generate_surrogate_key(['receipt_id', 'partner_item_id']) }} as receipt_item_id,
+	{{ dbt_utils.generate_surrogate_key(['receipt_id', 'partner_item_id']) }} as receipt_item_id,
     receipt_id,
     partner_item_id, 
 	barcode,

@@ -6,16 +6,22 @@ models:
     List of users with their attributes.
   tests:
     - dbt_utils.expression_is_true:
+        # you cannot scan something before you create a receipt
         expression: "created_timestamp <= scanned_timestamp"
     - dbt_utils.expression_is_true:
+        # you cannot modify something before you create it
         expression: "created_timestamp <= modified_timestamp"
     - dbt_utils.expression_is_true:
+        # you must purchase something before you have a receipt to create
         expression: "purchased_timestamp <= created_timestamp"
     - dbt_utils.expression_is_true:
+        # you must create something before you finish it
         expression: "created_timestamp <= finished_timestamp"
     - dbt_utils.expression_is_true:
+        # you are awarded points after you finish with a receipt
         expression: "finished_timestamp <= points_awarded_timestamp"
     - dbt_utils.expression_is_true:
+        # check that the number of purchased items is the same as the number of items on a receipt
         expression: "array_size(rewards_receipt_item_array) = purchased_item_count"
   columns:
     - name: receipt_id
@@ -37,6 +43,9 @@ models:
         - not_null
     - name: rewards_receipt_status
       description: "{{ doc('rewards_receipt_status') }}"
+      tests:
+        - accepted_values:
+            values: ['FINISHED', 'PENDING', 'FLAGGED', 'REJECTED', 'SUBMITTED']
     - name: user_id
       description: "{{ doc('user_id') }}"
       tests:
@@ -47,24 +56,34 @@ models:
       description: "{{ doc('total_spent_amt_usd') }}"
       tests: 
         - not_null
+        - is_positive
     - name: rewards_receipt_item_array
       description: "{{ doc('rewards_receipt_item_array') }}"
       tests:
         - not_null
+        - is_positive
     - name: purchased_timestamp
       description: "{{ doc('purchased_timestamp') }}"
       tests:
         - not_null
     - name: purchased_item_count
       description: "{{ doc('purchased_item_count') }}"
+      tests:
+        - not_null 
+        - is_positive
     - name: points_earned
       description: "{{ doc('points_earned') }}"
+      tests:
+        - not_null 
+        - is_positive
     - name: finished_timestamp
       description: "{{ doc('finished_timestamp') }}"
       tests:
         - not_null
     - name: bonus_points_earned
       description: "{{ doc('bonus_points_earned') }}"
+      tests:
+        - not_null
     - name: bonus_points_earned_reason
       description: "{{ doc('bonus_points_earned_reason') }}"
     - name: points_awarded_timestamp

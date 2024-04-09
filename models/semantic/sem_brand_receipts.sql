@@ -4,7 +4,7 @@
     How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
 #}
 
-cte_monthly_brands as (
+with cte_monthly_brands as (
 
     select
         fct_receipt_items.brand_code,
@@ -21,12 +21,12 @@ cte_monthly_brands as (
     left join
         {{ ref('dim_brands') }}
         --this _should_ use brand_id but we don't have that -- in a prod setting we'd generate a brand_id to be joined here
-        on cte_brands.brand_code = fct_receipt_items.brand_code
+        on dim_brands.brand_code = fct_receipt_items.brand_code
     group by all
 
 )
 
---technically returns more information than is needed, but users usually have additional questions on history after seeing month-over-month
+--technically returns more information than is needed, but users usually have additional questions on history after seeing month-over-month so this is pre-empting that
 select
     brand_name,
     brand_code,

@@ -38,3 +38,7 @@ models:
         - not_null
     - name: category_code
       description: "{{ doc('category_code') }}"
+      tests:
+        # test that each category code has one and only one category name
+        - hierarchy:
+            parent_column_name: 'category_name'
